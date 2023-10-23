@@ -109,11 +109,8 @@ Clone this repository to your desired folder:
 
 <!-- Author -->
 
-👤 **Authors**
-
-
-👤 **Authors**
-Saba Ahmad
+👤 **Author**
+Adeshina Adenuga
 
 
 - GitHub: [@nuga0909](https://github.com/nuga0909)
