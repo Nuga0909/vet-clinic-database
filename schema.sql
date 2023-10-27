@@ -69,7 +69,7 @@ CREATE TABLE specializations (
 -- many-to-many relationship between the tables animals and vets
 CREATE TABLE visits (
     id SERIAL PRIMARY KEY,
-    animals_id INT REFERENCES animals(id);
+    animals_id INT REFERENCES animals(id),
     vets_id INT REFERENCES vets(id),
     date_of_visit DATE
-)
+);
