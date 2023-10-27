@@ -44,3 +44,32 @@ ALTER TABLE animals ADD COLUMN species_id INT, ADD COLUMN owner_id INT;
 ALTER TABLE animals ADD CONSTRAINT fk_animals_species FOREIGN KEY (species_id) REFERENCES species (id);
 
 ALTER TABLE animals ADD CONSTRAINT fk_animals_owners FOREIGN KEY (owner_id) REFERENCES owners (id);
+
+-- add join table
+
+-- Create a table named vets with the following columns:
+-- id: integer (set it as autoincremented PRIMARY KEY)
+-- name: string
+-- age: integer
+-- date_of_graduation: date
+CREATE TABLE vets (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    age INT,
+    date_of_graduation DATE
+);
+
+-- many-to-many relationship between the tables species and vets
+CREATE TABLE specializations (
+    id SERIAL PRIMARY KEY,
+    species_id INT REFERENCES species(id),
+    vets_id INT REFERENCES vets(id)
+);
+
+-- many-to-many relationship between the tables animals and vets
+CREATE TABLE visits (
+    id SERIAL PRIMARY KEY,
+    animals_id INT REFERENCES animals(id);
+    vets_id INT REFERENCES vets(id),
+    date_of_visit DATE
+)
