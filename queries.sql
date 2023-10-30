@@ -288,8 +288,3 @@ where animals_id = 4;
 SELECT *
 FROM visits
 where vet_id = 2;
--- Added index to vets_id column on visits table
-CREATE INDEX visits_covering_idx ON visits(vets_id) INCLUDE (visits_id, animals_id, vets_id, visit_date);
-SELECT *
-FROM visits
-where vet_id = 2;
