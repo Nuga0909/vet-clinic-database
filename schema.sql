@@ -64,10 +64,15 @@ CREATE TABLE visits (
     vets_id INT REFERENCES vets(id),
     date_of_visit DATE
 );
+
+
 -- database performance audit
 ALTER TABLE owners
 ADD COLUMN email VARCHAR(120);
+
+-- Added index to animals_id column on visits table
+CREATE INDEX idx_animal_id ON visits (animals_id ASC);
 -- Added index to vets_id column on visits table
-CREATE INDEX visits_covering_idx ON visits(vets_id) INCLUDE (visits_id, animals_id, vets_id, visit_date);
+CREATE INDEX visits_covering_idx ON visits(vets_id) INCLUDE (id, animals_id, vets_id, date_of_visit);
 --Create index to email column on owners table
 CREATE INDEX owner_email ON owners(email ASC);

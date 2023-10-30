@@ -280,14 +280,13 @@ explain analyze
 SELECT COUNT(*)
 FROM visits
 where animals_id = 4;
-CREATE INDEX idx_animal_id ON visits (animals_id ASC);
+
 explain analyze
-SELECT COUNT(*)
-FROM visits
-where animals_id = 4;
 SELECT *
 FROM visits
-where vet_id = 2;
+where vets_id = 2;
+
+explain analyze
 SELECT *
 FROM owners
 where email = 'owner_18327@mail.com';
