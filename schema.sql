@@ -73,3 +73,7 @@ CREATE TABLE visits (
     vets_id INT REFERENCES vets(id),
     date_of_visit DATE
 );
+
+
+-- database performance audit
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
