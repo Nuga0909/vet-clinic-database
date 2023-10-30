@@ -196,3 +196,19 @@ AND vets.name = 'Maisy Smith'
 GROUP BY animals.name, vet
 )
 SELECT * FROM new WHERE total_visits = (SELECT MAX(total_visits) FROM new);
+
+
+
+-- database performance audit
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+
+-- SELECT COUNT(*) FROM visits where animal_id = 4;
+-- SELECT * FROM visits where vet_id = 2;
+-- SELECT * FROM owners where email = 'owner_18327@mail.com';
+-- Use EXPLAIN ANALYZE on the previous queries to check what is happening. Take screenshots of them - they will be necessary later.
+
+-- Find a way to decrease the execution time of the first query
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+CREATE INDEX idx_animal_id ON visits (animals_id ASC);
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+
