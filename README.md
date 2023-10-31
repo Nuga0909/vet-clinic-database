@@ -109,12 +109,18 @@ Clone this repository to your desired folder:
 
 <!-- Author -->
 
-👤 **Author**
+👤 **Authors**
 Adeshina Adenuga
-
 
 - GitHub: [@nuga0909](https://github.com/nuga0909)
 - LinkedIn: [@nuga0909](https://www.linkedin.com/in/adeshina-adenuga/)
+
+
+Sulaimon Ayodeji
+
+- GitHub: [@githubhandle](https://github.com/sulaimonaa)
+- Twitter: [@twitterhandle](https://twitter.com/ayodej007)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sulaimonaa)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
